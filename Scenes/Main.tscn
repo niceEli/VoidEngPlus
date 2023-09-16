@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=3 uid="uid://b3qh647eiujht"]
+
+[ext_resource type="Texture2D" uid="uid://bldetu2ycuyls" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_xn3tt"]
+[ext_resource type="Texture2D" uid="uid://bykn76q17lxgi" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_kpjy0"]
+[ext_resource type="Script" path="res://Scripts/playerobj.gd" id="3_40jb8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uos8v"]
+albedo_texture = ExtResource("1_xn3tt")
+uv1_triplanar = true
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1e10r"]
+panorama = ExtResource("2_kpjy0")
+
+[sub_resource type="Sky" id="Sky_obgtu"]
+sky_material = SubResource("PanoramaSkyMaterial_1e10r")
+
+[sub_resource type="Environment" id="Environment_uleum"]
+background_mode = 2
+sky = SubResource("Sky_obgtu")
+reflected_light_source = 2
+tonemap_mode = 2
+glow_enabled = true
+glow_normalized = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7bp4n"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_05p4m"]
+height = 1.2
+
+[node name="World" type="Node3D"]
+
+[node name="stage" type="Node3D" parent="."]
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.82508, 0)
+use_collision = true
+size = Vector3(20, 1, 20)
+material = SubResource("StandardMaterial3D_uos8v")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.148, 3, 0)
+use_collision = true
+size = Vector3(20, 1, 20)
+material = SubResource("StandardMaterial3D_uos8v")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+size = Vector3(20, 1, 20)
+material = SubResource("StandardMaterial3D_uos8v")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="stage"]
+transform = Transform3D(0.995611, 0.093587, 0, -0.093587, 0.995611, 0, 0, 0, 1, 0, 0.5, 20)
+use_collision = true
+size = Vector3(20, 1, 20)
+material = SubResource("StandardMaterial3D_uos8v")
+
+[node name="env" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="env"]
+environment = SubResource("Environment_uleum")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="env"]
+transform = Transform3D(0.760916, 0.561921, -0.324425, -1.21827e-08, 0.5, 0.866025, 0.648851, -0.658972, 0.380458, -0.000686049, 0, -0.00511026)
+light_energy = 0.75
+shadow_enabled = true
+
+[node name="playerobj" type="CharacterBody3D" parent="."]
+script = ExtResource("3_40jb8")
+
+[node name="standingShape" type="CollisionShape3D" parent="playerobj"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0265718, 1.00665, -0.00231504)
+shape = SubResource("CapsuleShape3D_7bp4n")
+
+[node name="crouchingShape" type="CollisionShape3D" parent="playerobj"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CapsuleShape3D_05p4m")
+disabled = true
+
+[node name="head" type="Node3D" parent="playerobj"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="MainCamera" type="Camera3D" parent="playerobj/head"]
+
+[node name="RayCast3D" type="RayCast3D" parent="playerobj"]
+target_position = Vector3(0, 2, 0)

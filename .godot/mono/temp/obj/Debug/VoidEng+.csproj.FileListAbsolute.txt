@@ -1,0 +1,17 @@
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\bin\Debug\VoidEng+.deps.json
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\bin\Debug\VoidEng+.runtimeconfig.json
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\bin\Debug\VoidEng+.dll
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\bin\Debug\VoidEng+.pdb
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\VoidEng+.csproj.AssemblyReference.cache
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\VoidEng+.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\VoidEng+.AssemblyInfoInputs.cache
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\VoidEng+.AssemblyInfo.cs
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\VoidEng+.csproj.CoreCompileInputs.cache
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\VoidEng+.csproj.CopyComplete
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\VoidEng+.dll
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\refint\VoidEng+.dll
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\VoidEng+.pdb
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\VoidEng+.genruntimeconfig.cache
+C:\Users\EliAv\Downloads\Unhity\VoidEng+\.godot\mono\temp\obj\Debug\ref\VoidEng+.dll

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "++mxKtxhNp3ycWBVlMInrwgUbSNSxVy7/O4vG+4wXCDJU32BXprXkUndaQGXY3+Q1Mx5Uxtzh0hS6Nhux67Jgw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\EliAv\\Downloads\\Unhity\\VoidEng+\\VoidEng+.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\EliAv\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "C:\\Users\\EliAv\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
+    "C:\\Users\\EliAv\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
