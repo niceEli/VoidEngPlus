@@ -1,3 +1,2 @@
-res://Main.tscn
 res://Scenes/Main.tscn
-res://Scripts/playerobj.gd
+res://playerobj.tscn

@@ -1,8 +1,10 @@
+CSGPolygon3D
+CollisionPolygon3D
+StaticBody3D
+Node3D
 RayCast3D
 Camera3D
-Node3D
 CollisionShape3D
 CharacterBody3D
 CSGBox3D
 MeshInstance3D
-StaticBody3D
