@@ -57,7 +57,7 @@ var crouchingDepth = 0.5
 
 # Camera
 
-@export var mouseSens = 0.25
+@export var mouseSens = 1
 
 var direction = Vector3.ZERO
 
