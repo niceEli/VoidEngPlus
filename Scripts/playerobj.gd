@@ -87,6 +87,10 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	
 	# Handle Movement States (pls maintainers switch to state machine)
+	
+	if Input.is_action_just_pressed("crouch") && sliding:
+		sliding = false
+	
 	if Input.is_action_pressed("crouch") || sliding:
 		# Crouching
 		currentSpeed = crouchingSpeed
@@ -180,6 +184,7 @@ func _physics_process(delta):
 		if !sliding and is_on_floor():
 			velocity.y = jumpVelocity
 		sliding = false
+
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
