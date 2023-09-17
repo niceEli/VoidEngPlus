@@ -16,6 +16,12 @@ config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/show_image=false
 config/icon="res://icon.svg"
 
+[autoload]
+
+OrchestratorNodeFactory="*res://addons/orchestrator/orchestrator_node_factory.gd"
+Orchestrator="*res://addons/orchestrator/orchestrator.gd"
+PlayerPrefs="*res://addons/PlayerPrefs/PlayerPrefs.tscn"
+
 [display]
 
 window/size/viewport_width=1150
@@ -26,6 +32,10 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="VoidEng+"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/PlayerPrefs/plugin.cfg", "res://addons/horizontal_file_system/plugin.cfg", "res://addons/orchestrator/plugin.cfg")
 
 [input]
 

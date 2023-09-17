@@ -1,2 +1,3 @@
 res://Scenes/Main.tscn
-res://playerobj.tscn
+res://docs/antora.yml
+res://Scenes/playerobj.tscn
