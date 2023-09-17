@@ -1,11 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://r3qwrucsytv2"]
+[gd_scene load_steps=9 format=3 uid="uid://r3qwrucsytv2"]
 
 [ext_resource type="Script" path="res://Scripts/playerobj.gd" id="1_b8ngb"]
+[ext_resource type="Texture2D" uid="uid://bykn76q17lxgi" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_wr52e"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7bp4n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_05p4m"]
 height = 1.2
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cha5x"]
+panorama = ExtResource("2_wr52e")
+
+[sub_resource type="Sky" id="Sky_obgtu"]
+sky_material = SubResource("PanoramaSkyMaterial_cha5x")
+
+[sub_resource type="Environment" id="Environment_8dkyo"]
+background_mode = 2
+sky = SubResource("Sky_obgtu")
+reflected_light_source = 2
+tonemap_mode = 2
+glow_enabled = true
+glow_normalized = true
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_163no"]
 
 [node name="playerobj" type="CharacterBody3D"]
 script = ExtResource("1_b8ngb")
@@ -30,3 +47,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 [node name="eyes" type="Node3D" parent="nek/head"]
 
 [node name="MainCamera" type="Camera3D" parent="nek/head/eyes"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8dkyo")
+camera_attributes = SubResource("CameraAttributesPractical_163no")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.760916, 0.561921, -0.324425, -1.21827e-08, 0.5, 0.866025, 0.648851, -0.658972, 0.380458, -0.000686049, 0, -0.00511026)
+light_energy = 0.75
+shadow_enabled = true
