@@ -22,6 +22,8 @@ var currentSpeed = 5.0
 
 @export var freeLookTiltAmount = 8
 
+@export var inSpeedDivide = 8
+
 # States
 
 var walking = false
@@ -57,7 +59,7 @@ var crouchingDepth = 0.5
 
 # Camera
 
-@export var mouseSens = 1
+@export var mouseSens = 0.25
 
 var direction = Vector3.ZERO
 
@@ -96,7 +98,7 @@ func _physics_process(delta):
 		
 		# Slide Begin Logic
 		
-		if sprinting && input_dir != Vector2.ZERO:
+		if sprinting && input_dir != Vector2.ZERO && is_on_floor():
 			sliding = true
 			slideTimer = slideTimerMax
 			slideVector = input_dir
@@ -128,7 +130,7 @@ func _physics_process(delta):
 		
 	# Handle Free Looking
 	
-	if Input.is_action_pressed("freeLook"):
+	if Input.is_action_pressed("freeLook") && !sliding:
 		freeLooking = true
 		mainCamera.rotation.z = deg_to_rad(nek.rotation.y*freeLookTiltAmount)
 	else:
@@ -182,7 +184,10 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
-	direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta*lerpSpeed)
+	direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta*lerpSpeed/inSpeedDivide)
+	
+	if is_on_floor():
+		direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta*lerpSpeed)
 	
 	if sliding:
 		direction = (transform.basis * Vector3(slideVector.x, 0, slideVector.y)).normalized()

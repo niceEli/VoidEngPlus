@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="VoidEng+"
+config/name="VoidEngPlus"
 run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/show_image=false
@@ -18,11 +18,9 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=287
-window/size/viewport_height=160
+window/size/viewport_width=1150
+window/size/viewport_height=640
 window/size/borderless=true
-window/size/window_width_override=1150
-window/size/window_height_override=640
 window/stretch/mode="viewport"
 
 [dotnet]
