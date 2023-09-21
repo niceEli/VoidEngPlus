@@ -26,8 +26,10 @@ PlayerPrefs="*res://addons/PlayerPrefs/PlayerPrefs.tscn"
 
 window/size/viewport_width=1150
 window/size/viewport_height=640
+window/size/mode=3
+window/size/resizable=false
 window/size/borderless=true
-window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
 
 [dotnet]
 
