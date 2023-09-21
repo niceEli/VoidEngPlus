@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3qh647eiujht"]
+[gd_scene load_steps=4 format=3 uid="uid://b3qh647eiujht"]
 
 [ext_resource type="Texture2D" uid="uid://bldetu2ycuyls" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_xn3tt"]
-[ext_resource type="PackedScene" uid="uid://c5wynu27jic56" path="res://assets/Models/abandoned_warehouse_-_interior_scene/scene.gltf" id="2_or3tq"]
 [ext_resource type="PackedScene" uid="uid://r3qwrucsytv2" path="res://Scenes/playerobj.tscn" id="3_wi6ij"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uos8v"]
@@ -77,9 +76,6 @@ transform = Transform3D(0.995562, -0.0941083, 0, 0.0926786, 0.980437, -0.173648,
 use_collision = true
 size = Vector3(20, 1, 20)
 material = SubResource("StandardMaterial3D_uos8v")
-
-[node name="scene" parent="stage" instance=ExtResource("2_or3tq")]
-transform = Transform3D(-0.000383932, 0, -1, 0, 1, 0, 1, 0, -0.000383932, 5.75312, 6.49008, -9.22406)
 
 [node name="env" type="Node3D" parent="."]
 
